@@ -1,0 +1,40 @@
+@tailwind base;
+
+* {
+    @apply box-border;
+}
+
+body {
+    @apply leading-relaxed;
+}
+
+ul {
+    @apply list-disc list-inside;
+}
+
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: 'Nunito', sans-serif;
+    }
+}
+
+@layer components {
+    .card {
+        background-color: theme('colors.white');
+        border-radius: theme('borderRadius.lg');
+        padding: theme('spacing.6');
+        box-shadow: theme('boxShadow.xl');
+        padding: 6rem;
+        margin: 1rem;
+
+    }
+
+    .card:hover {
+        transform: scale(.95);
+        background-color: #e0f2fe;
+    }
+
+}
